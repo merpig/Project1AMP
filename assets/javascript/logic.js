@@ -161,7 +161,7 @@ function genericApiCall(){
 		case 'shelter.find':
 			//$("#shelterResult").html("Please wait while shelters close by are loaded");
 			var tempUrl = queryUrl + urlMethod + apiKey + userLocation + zipCode +"&format=json&count=10";
-			var proxyURL = "";//"https://cors-anywhere.herokuapp.com/";
+			var proxyURL = "https://cors-anywhere.herokuapp.com/";
 			var settings = {
 				"async": true,
 				"crossDomain": true,
@@ -174,7 +174,7 @@ function genericApiCall(){
 				}
 			}
 			$.ajax(settings).done(function (response) {
-				if(response.petfinder.shelters === undefined){
+				if(!response.petfinder.shelters){
 					$("#shelterResults").text("No shelters found for zip code: " + zipCode);
 					return;
 				}
@@ -238,7 +238,7 @@ function genericApiCall(){
 		case 'shelter.getPets':
 			$(".body").text("Please wait while the good bois and gals are loaded");
 			var tempUrl = queryUrl + urlMethod + apiKey + shelterIdTag + shelterId + status;
-			var proxyURL = "";//"https://cors-anywhere.herokuapp.com/";
+			var proxyURL = "https://cors-anywhere.herokuapp.com/";
 			var settings = {
 				"async": true,
 				"crossDomain": true,
