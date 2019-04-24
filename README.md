@@ -1,6 +1,6 @@
 # PetAwesome Repository 
 
-[LIVE](https://merpig.github.io/Project1AMP)
+[Click here for live site](https://merpig.github.io/Project1AMP)
 
 # WELCOME! 
 
